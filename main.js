@@ -1,4 +1,4 @@
-import './style.css';
+import './style.scss';
 
 const cards = [
   "🥰", "🙃", "🤩", "🤪"
@@ -104,13 +104,14 @@ function startTimer() {
   const myInterval = setInterval(myTimer, 1);
   
   function myTimer() {
-      i = i - 0.05;
+      i = i - 0.15;
       timer.style.width = `${i}px`;
-      if (i == 0) {
+      if (i < 0) {
+          i = 0;
+          clearInterval(myInterval);
           gameOver();
       }
   }
-  
   return myInterval;
 }
 

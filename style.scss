@@ -35,26 +35,26 @@ body {
   background-color: var(--raisin-black);
   position: relative;
   overflow: hidden;
-}
+  
+  &.open {
+    border: 5px solid var(--minion-yellow);
 
-.card.open {
-  border: 5px solid var(--minion-yellow);
-}
+    &:before {
+      transform: translateY(100%);
+    }
+  }
 
-.card.open:before{ 
-  transform: translateY(100%);
-}
-
-.card:before {
-  content: "";
-  position: absolute;
-  transform: translateY(0px);
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  background-color: var(--minion-yellow);
-  transition: transform .2s ease-in-out;
+  &:before {
+    content: "";
+    position: absolute;
+    transform: translateY(0px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: var(--minion-yellow);
+    transition: transform .2s ease-in-out;
+  }
 }
 
 .timer {
