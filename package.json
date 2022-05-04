@@ -5,9 +5,13 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && surge"
   },
   "devDependencies": {
     "vite": "^2.9.7"
+  },
+  "dependencies": {
+    "surge": "^0.23.1"
   }
 }

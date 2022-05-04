@@ -1,3 +1,3 @@
 export default {
-    base: "/memory-card"
-  }
+    base: "./memory-card"
+}
